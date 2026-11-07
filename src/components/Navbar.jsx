@@ -35,16 +35,14 @@ export default function Navbar({ onOpenQuote }) {
           
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-blue-600 to-amber-500 p-0.5 shadow-md shadow-sky-500/15 group-hover:shadow-sky-500/30 transition-all">
-              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                <Compass className="w-5 h-5 text-sky-600 group-hover:rotate-45 transition-transform duration-300" />
-              </div>
+            <div className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 p-1 shadow-sm group-hover:shadow-md transition-all flex items-center justify-center overflow-hidden">
+              <img src="/assets/logo-icon.png" alt="Shree Engineers Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <div className="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5 font-sans">
+              <div className="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5 font-sans leading-none">
                 SHREE <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">ENGINEERS</span>
               </div>
-              <div className="text-[10px] uppercase tracking-wider text-slate-500 font-mono font-medium">
+              <div className="text-[10px] uppercase tracking-wider text-slate-500 font-mono font-medium mt-1">
                 CAD • Heavy Equip • Software
               </div>
             </div>
