@@ -7,7 +7,9 @@ import {
   Send, 
   CheckCircle, 
   HelpCircle,
-  ChevronDown
+  ChevronDown,
+  Globe,
+  FileText
 } from 'lucide-react';
 
 export default function ContactSection() {
@@ -67,6 +69,7 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-12 gap-10 items-start mb-20">
           
           {/* Left 5 Cols: Contact Information & Cards */}
+          {/* Left 5 Cols: Contact Information */}
           <div className="lg:col-span-5 space-y-4">
             
             <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-sky-400 transition-all shadow-xs flex items-start gap-4">
@@ -74,10 +77,10 @@ export default function ContactSection() {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 mb-1">Corporate Head Office</h4>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">Office Address</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Shree Engineers Industrial & Technology Complex,<br />
-                  Industrial Area, Phase II, Pune / Navi Mumbai, Maharashtra, India.
+                  B/12, Prabhat CHSL, Senapati Bapat Marg,<br />
+                  Dadar (West), Mumbai, Maharashtra 400028
                 </p>
               </div>
             </div>
@@ -87,10 +90,9 @@ export default function ContactSection() {
                 <PhoneCall className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 mb-1">Direct Lines & Inquiries</h4>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">Phone / WhatsApp</h4>
                 <p className="text-xs text-slate-600">
-                  Engineering Desk: <a href="tel:+919876543210" className="text-sky-700 font-semibold hover:underline">+91 98765 43210</a><br />
-                  Software Solutions: <a href="tel:+919876543211" className="text-sky-700 font-semibold hover:underline">+91 98765 43211</a>
+                  Direct Line: <a href="tel:+918976600537" className="text-sky-700 font-semibold hover:underline">+91 8976600537</a>
                 </p>
               </div>
             </div>
@@ -100,10 +102,23 @@ export default function ContactSection() {
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 mb-1">Electronic Mail</h4>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">Mail ID</h4>
                 <p className="text-xs text-slate-600">
-                  General: <a href="mailto:info@shreeengineers.com" className="text-amber-700 font-semibold hover:underline">info@shreeengineers.com</a><br />
-                  RFQs & Proposals: <a href="mailto:projects@shreeengineers.com" className="text-amber-700 font-semibold hover:underline">projects@shreeengineers.com</a>
+                  <a href="mailto:info@shreeengineerscom.org" className="text-amber-700 font-semibold hover:underline">info@shreeengineerscom.org</a>
+                </p>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-sky-400 transition-all shadow-xs flex items-start gap-4">
+              <div className="p-3 rounded-xl bg-purple-50 text-purple-700 shrink-0 border border-purple-100">
+                <Globe className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">Official Website</h4>
+                <p className="text-xs text-slate-600">
+                  <a href="https://shreeengineerss.in" target="_blank" rel="noopener noreferrer" className="text-purple-700 font-semibold hover:underline">
+                    shreeengineerss.in
+                  </a>
                 </p>
               </div>
             </div>
@@ -118,12 +133,12 @@ export default function ContactSection() {
                   Immediate responses for drawing reviews, software demos, and training inquiries.
                 </p>
                 <a
-                  href="https://wa.me/919876543210?text=Hello%20Shree%20Engineers,%20I%20have%20an%20inquiry"
+                  href="https://wa.me/918976600537?text=Hello%20Shree%20Engineers,%20I%20have%20an%20inquiry"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800"
                 >
-                  <span>Chat on WhatsApp Now</span>
+                  <span>Chat on WhatsApp Now (+91 8976600537)</span>
                   <span>→</span>
                 </a>
               </div>
@@ -195,7 +210,7 @@ export default function ContactSection() {
                       required
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 8976600537"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-sky-600 focus:bg-white transition-colors"
                     />
                   </div>

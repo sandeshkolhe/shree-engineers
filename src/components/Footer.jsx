@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, ShieldCheck, ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
+import { Compass, ShieldCheck, ArrowUp, Mail, Phone, MapPin, Globe, FileText } from 'lucide-react';
 
 export default function Footer({ onOpenQuote }) {
   const scrollToTop = () => {
@@ -72,29 +72,45 @@ export default function Footer({ onOpenQuote }) {
           {/* Col 5: Quick Connect */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold">
-              Inquiries & RFQs
+              Contact & Inquiries
             </h4>
             <div className="space-y-2 text-xs">
               <div className="flex items-center gap-2 text-slate-300">
                 <Phone className="w-3.5 h-3.5 text-sky-400" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+918976600537" className="hover:text-white transition-colors">+91 8976600537</a>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Mail className="w-3.5 h-3.5 text-amber-400" />
-                <span>info@shreeengineers.com</span>
+                <a href="mailto:info@shreeengineerscom.org" className="hover:text-white transition-colors">info@shreeengineerscom.org</a>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <Globe className="w-3.5 h-3.5 text-purple-400" />
+                <a href="https://shreeengineerss.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">shreeengineerss.in</a>
               </div>
               <div className="flex items-start gap-2 text-slate-400 text-[11px] pt-1">
                 <MapPin className="w-3.5 h-3.5 text-sky-400 shrink-0 mt-0.5" />
-                <span>Industrial Complex, Phase II, Pune / Navi Mumbai, MH</span>
+                <span>B/12, Prabhat CHSL, Senapati Bapat Marg, Dadar (West), Mumbai 400028</span>
               </div>
             </div>
 
-            <button
-              onClick={() => onOpenQuote()}
-              className="mt-3 w-full py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 shadow-sm"
-            >
-              Request Quick Quote
-            </button>
+            <div className="pt-2 space-y-2">
+              <a
+                href="/docs/shree-engineers-autocad-brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2 px-3 rounded-xl text-xs font-bold text-sky-300 bg-slate-800/80 hover:bg-slate-800 border border-slate-700 flex items-center justify-center gap-1.5 transition-colors"
+              >
+                <FileText className="w-3.5 h-3.5 text-sky-400" />
+                <span>Download Brochure (PDF)</span>
+              </a>
+
+              <button
+                onClick={() => onOpenQuote()}
+                className="w-full py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 shadow-sm"
+              >
+                Request Quick Quote
+              </button>
+            </div>
           </div>
 
         </div>

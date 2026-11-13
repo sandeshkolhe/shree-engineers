@@ -1,3 +1,14 @@
+export const companyInfo = {
+  name: "Shree Engineers",
+  address: "B/12, Prabhat CHSL, Senapati Bapat Marg, Dadar (West), Mumbai, Maharashtra 400028",
+  phone: "+91 8976600537",
+  whatsappNumber: "918976600537",
+  email: "info@shreeengineerscom.org",
+  website: "shreeengineerss.in",
+  websiteUrl: "https://shreeengineerss.in",
+  mainBrochure: "/docs/shree-engineers-autocad-brochure.pdf"
+};
+
 export const engineeringServices = [
   {
     id: "autocad-2d-3d",
@@ -5,6 +16,8 @@ export const engineeringServices = [
     category: "Drafting & Modeling",
     icon: "DraftingCompass",
     badge: "Core Engineering",
+    brochure: "/docs/shree-engineers-autocad-brochure.pdf",
+    brochureName: "AutoCAD 2D & 3D Brochure",
     shortDesc: "High-precision drafting, schematic generation, and 3D parametric spatial modeling.",
     fullDesc: "We provide comprehensive 2D drafting and 3D modeling solutions following ISO, DIN, and ASME drafting standards. From conceptual sketches to fabrication-ready shop drawings, our models ensure seamless manufacturing integration and zero clash tolerance.",
     keyHighlights: [
@@ -23,23 +36,28 @@ export const engineeringServices = [
     category: "Heavy Equipment",
     icon: "Boxes",
     badge: "Industrial Equipment",
+    brochure: "/docs/02-pressure-vessel-design.pdf",
+    brochureName: "Pressure Vessel & Equipment Brochure",
     shortDesc: "Thermal, mechanical, and code-compliant design for process industry equipment.",
     fullDesc: "Specialized engineering design calculations, FEA verification, and detailing for static process plant equipment, catering to oil & gas, chemical, petrochemical, and power generation industries.",
     subcategories: [
       {
         name: "Pressure Vessels",
         code: "ASME Sec VIII Div 1 & 2",
-        detail: "Internal/external pressure calculations, nozzle reinforcement, saddle & skirt support design, hydro-test analysis."
+        detail: "Internal/external pressure calculations, nozzle reinforcement, saddle & skirt support design, hydro-test analysis.",
+        brochure: "/docs/02-pressure-vessel-design.pdf"
       },
       {
         name: "Heat Exchangers [Shell & Tube]",
         code: "TEMA & ASME Sec VIII",
-        detail: "Thermal rating, tube-sheet thickness, baffle spacing, floating head / fixed tube-sheet mechanical engineering."
+        detail: "Thermal rating, tube-sheet thickness, baffle spacing, floating head / fixed tube-sheet mechanical engineering.",
+        brochure: "/docs/03-heat-exchanger-design.pdf"
       },
       {
         name: "Storage Tanks",
         code: "API 650 & API 620",
-        detail: "Atmospheric & low-pressure storage tank design, shell thickness computation, cone/floating roof, wind girder & seismic load verification."
+        detail: "Atmospheric & low-pressure storage tank design, shell thickness computation, cone/floating roof, wind girder & seismic load verification.",
+        brochure: "/docs/04-api-650-storage-tank-design.pdf"
       }
     ],
     keyHighlights: [
@@ -57,6 +75,8 @@ export const engineeringServices = [
     category: "Industrial Machinery",
     icon: "Cpu",
     badge: "Custom Machinery",
+    brochure: "/docs/07-mechanical-machine-design.pdf",
+    brochureName: "Mechanical Machine Design Brochure",
     shortDesc: "End-to-end design of custom industrial machines, compound mechanisms, and tooling.",
     fullDesc: "We turn complex mechanical requirements into operational reality. From custom automation machinery, conveyor systems, and hydraulic/pneumatic test rigs to compound mechanical assemblies, we handle kinematics, stress distribution, and component life calculations.",
     keyHighlights: [
@@ -75,6 +95,8 @@ export const engineeringServices = [
     category: "Infrastructure",
     icon: "Building2",
     badge: "Structural Integrity",
+    brochure: "/docs/06-civil-structural-engineering.pdf",
+    brochureName: "Civil & Structural Design Brochure",
     shortDesc: "Robust structural steel and reinforced concrete design for plants and facilities.",
     fullDesc: "Specialized in structural design for industrial plant buildings, equipment support structures, pipe racks, platform stairways, and foundations. Engineered to withstand heavy dead loads, dynamic operating machinery, wind, and seismic conditions.",
     keyHighlights: [
@@ -93,6 +115,8 @@ export const engineeringServices = [
     category: "Process Piping",
     icon: "GitBranch",
     badge: "3D Plant Piping",
+    brochure: "/docs/05-aveva-e3d-plant-design.pdf",
+    brochureName: "AVEVA E3D Plant Design Brochure",
     shortDesc: "Complete piping engineering, 3D plant layout, isometric extraction, and stress analysis.",
     fullDesc: "Delivering end-to-end piping engineering using industry gold-standard tools like AVEVA E3D / PDMS and AutoCAD Plant 3D. We engineer clash-free plant layouts, plot plans, piping isometrics with full BOM, and thermal stress calculations.",
     keyHighlights: [
@@ -113,6 +137,7 @@ export const softwareServices = [
     title: "Web Applications & Business Portals",
     icon: "Globe",
     badge: "Enterprise Web",
+    brochure: "/docs/08-website-web-application-development.pdf",
     desc: "Custom, cloud-native web portals and SaaS platforms built with high-velocity frameworks for exceptional reliability and responsiveness."
   },
   {
@@ -120,6 +145,7 @@ export const softwareServices = [
     title: "Admin Panels & CRM Systems",
     icon: "LayoutDashboard",
     badge: "Operations",
+    brochure: "/docs/09-admin-panel-crm-development.pdf",
     desc: "Centralized client management, sales pipelines, task tracking, and role-governed admin interfaces to streamline enterprise workflows."
   },
   {
@@ -127,6 +153,7 @@ export const softwareServices = [
     title: "ERP & Business Management Software",
     icon: "Network",
     badge: "Full ERP",
+    brochure: "/docs/10-erp-software-development.pdf",
     desc: "Integrated ERP systems orchestrating inventory, procurement, billing, production scheduling, and vendor relationships."
   },
   {
@@ -134,6 +161,7 @@ export const softwareServices = [
     title: "Android & iOS Mobile Applications",
     icon: "Smartphone",
     badge: "Cross-Platform",
+    brochure: "/docs/11-android-ios-mobile-app-development.pdf",
     desc: "Cross-platform mobile apps built with Flutter, ensuring fluid 60FPS UI, offline capability, and native OS integrations."
   },
   {
@@ -141,6 +169,7 @@ export const softwareServices = [
     title: "Secure Login, User Roles & Permissions",
     icon: "ShieldCheck",
     badge: "Security First",
+    brochure: "/docs/10-erp-software-development.pdf",
     desc: "Enterprise-grade authentication with JWT/OAuth2, multi-factor authentication (MFA), and fine-grained Role-Based Access Control (RBAC)."
   },
   {
@@ -148,6 +177,7 @@ export const softwareServices = [
     title: "E-Commerce Websites & Online Platforms",
     icon: "ShoppingCart",
     badge: "Digital Commerce",
+    brochure: "/docs/12-ecommerce-development.pdf",
     desc: "Scalable B2B & B2C e-commerce portals equipped with secure payment gateways, inventory sync, and intelligent order tracking."
   },
   {
@@ -155,6 +185,7 @@ export const softwareServices = [
     title: "Interactive Dashboards & Reporting Systems",
     icon: "BarChart3",
     badge: "Real-time BI",
+    brochure: "/docs/09-admin-panel-crm-development.pdf",
     desc: "Live analytics dashboards, scheduled automated report generation, and data visualization engines for strategic decision-making."
   },
   {
@@ -162,6 +193,7 @@ export const softwareServices = [
     title: "REST APIs & Third-Party Integrations",
     icon: "Webhook",
     badge: "Interoperability",
+    brochure: "/docs/14-database-backend-development.pdf",
     desc: "Robust REST & GraphQL microservices integrating payment gateways, SMS/Email services, ERPs, and legacy enterprise software."
   },
   {
@@ -169,6 +201,7 @@ export const softwareServices = [
     title: "Cloud Hosting, Deployment & Maintenance",
     icon: "Cloud",
     badge: "High Availability",
+    brochure: "/docs/13-cloud-hosting-deployment.pdf",
     desc: "Automated CI/CD pipelines, containerized Docker deployments, AWS/Azure setup, monitoring, and 99.9% uptime maintenance."
   },
   {
@@ -176,6 +209,7 @@ export const softwareServices = [
     title: "Database Design & Backend Development",
     icon: "Database",
     badge: "Robust Backend",
+    brochure: "/docs/14-database-backend-development.pdf",
     desc: "High-performance data architecture using PostgreSQL, MySQL, and MongoDB with indexing, replication, and query optimization."
   },
   {
@@ -183,6 +217,7 @@ export const softwareServices = [
     title: "Workflow Automation & Custom Business Solutions",
     icon: "Cog",
     badge: "Smart Automation",
+    brochure: "/docs/15-workflow-automation.pdf",
     desc: "Eliminate repetitive operations with tailored digital workflows, approval triggers, document parsing, and business logic automation."
   }
 ];
@@ -192,6 +227,7 @@ export const trainingProgrammes = [
     id: "cad-piping-training",
     title: "Industrial Piping & E3D Plant Design Training",
     badge: "Engineering Academy",
+    brochure: "/docs/16-aveva-e3d-industrial-piping-training.pdf",
     duration: "8 - 12 Weeks",
     mode: "Hands-on Practical & Live Industrial Projects",
     highlights: [
@@ -206,6 +242,7 @@ export const trainingProgrammes = [
     id: "equipment-design-training",
     title: "Pressure Vessel & Heat Exchanger Design (ASME / API)",
     badge: "Equipment Specialization",
+    brochure: "/docs/17-pressure-vessel-heat-exchanger-training.pdf",
     duration: "6 - 10 Weeks",
     mode: "Code Calculations + Software Modeling",
     highlights: [
@@ -220,6 +257,7 @@ export const trainingProgrammes = [
     id: "fullstack-software-training",
     title: "Full-Stack Web & Mobile App Development Bootcamp",
     badge: "Software Academy",
+    brochure: "/docs/18-full-stack-web-mobile-development-training.pdf",
     duration: "12 - 16 Weeks",
     mode: "Live Coding & Enterprise Project Deployment",
     highlights: [

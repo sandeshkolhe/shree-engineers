@@ -7,7 +7,8 @@ import {
   Code2, 
   ShieldCheck, 
   Sparkles,
-  Compass
+  Compass,
+  FileText
 } from 'lucide-react';
 
 export default function Hero({ onOpenQuote }) {
@@ -55,7 +56,7 @@ export default function Hero({ onOpenQuote }) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-3">
               <button
                 onClick={onOpenQuote}
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 shadow-lg shadow-sky-600/25 hover:shadow-sky-600/40 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 group"
@@ -65,10 +66,21 @@ export default function Hero({ onOpenQuote }) {
               </button>
 
               <a
+                href="/docs/shree-engineers-autocad-brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-300 shadow-sm transition-all flex items-center justify-center gap-2 group"
+                title="Open AutoCAD 2D & 3D Corporate Brochure (PDF)"
+              >
+                <FileText className="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform" />
+                <span>View Brochure (PDF)</span>
+              </a>
+
+              <a
                 href="#engineering-services"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 hover:border-sky-500 shadow-sm transition-all flex items-center justify-center gap-2"
               >
-                <span>Explore Engineering Services</span>
+                <span>Explore Services</span>
               </a>
             </div>
           </div>

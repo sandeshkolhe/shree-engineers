@@ -12,7 +12,8 @@ import {
   Database, 
   Cog,
   ArrowRight,
-  Code2
+  Code2,
+  FileText
 } from 'lucide-react';
 import { softwareServices } from '../data/servicesData';
 
@@ -77,11 +78,24 @@ export default function SoftwareServices({ onOpenQuote }) {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-medium text-slate-500">Enterprise Ready</span>
+                <div className="pt-4 mt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
+                  {service.brochure ? (
+                    <a
+                      href={service.brochure}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-950 bg-amber-50 hover:bg-amber-100 px-2.5 py-1.5 rounded-lg border border-amber-200 shadow-2xs transition-colors"
+                      title={`Open ${service.title} Details PDF`}
+                    >
+                      <FileText className="w-3.5 h-3.5 text-amber-600" />
+                      <span>View Brochure (PDF)</span>
+                    </a>
+                  ) : (
+                    <span className="text-[11px] font-mono font-medium text-slate-500">Enterprise Ready</span>
+                  )}
                   <button
                     onClick={() => onOpenQuote(service.title)}
-                    className="text-xs font-bold text-amber-700 hover:text-amber-800 flex items-center gap-1 group-hover:translate-x-1 transition-all"
+                    className="text-xs font-bold text-slate-700 hover:text-sky-700 flex items-center gap-1 group-hover:translate-x-1 transition-all ml-auto"
                   >
                     <span>Inquire</span>
                     <ArrowRight className="w-3.5 h-3.5" />

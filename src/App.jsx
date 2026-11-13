@@ -73,7 +73,7 @@ export default function App() {
       {/* Floating Action Button (WhatsApp Quick Inquiry) */}
       <aside aria-label="Floating WhatsApp Inquiry" className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
         <a
-          href="https://wa.me/919876543210?text=Hello%20Shree%20Engineers,%20I%20would%20like%20to%20discuss%20a%20project."
+          href="https://wa.me/918976600537?text=Hello%20Shree%20Engineers,%20I%20would%20like%20to%20discuss%20a%20project."
           target="_blank"
           rel="noopener noreferrer"
           className="p-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-xl hover:shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center group"

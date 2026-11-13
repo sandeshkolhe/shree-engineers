@@ -47,6 +47,7 @@ The root directory contains the full modern React application:
 ---
 
 ## 📞 Contact Information
-- **Email**: info@shreeengineers.com
-- **Phone**: +91 98765 43210
-- **Location**: Pune / Navi Mumbai, Maharashtra, India
+- **Office Address**: B/12, Prabhat CHSL, Senapati Bapat Marg, Dadar (West), Mumbai, Maharashtra 400028
+- **Phone / WhatsApp**: +91 8976600537
+- **Website**: [shreeengineerss.in](https://shreeengineerss.in)
+- **Email**: info@shreeengineerscom.org

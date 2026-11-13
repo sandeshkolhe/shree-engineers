@@ -8,7 +8,8 @@ import {
   MessageSquare, 
   Cpu, 
   Code2, 
-  ArrowRight
+  ArrowRight,
+  FileText
 } from 'lucide-react';
 
 export default function Navbar({ onOpenQuote }) {
@@ -124,12 +125,23 @@ export default function Navbar({ onOpenQuote }) {
           </nav>
 
           {/* Quick Actions & Quote CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5">
             <a 
-              href="https://wa.me/919876543210?text=Hello%20Shree%20Engineers,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+              href="/docs/shree-engineers-autocad-brochure.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-sky-800 bg-sky-50 border border-sky-200 hover:bg-sky-100 transition-all"
+              title="View Corporate Brochure (PDF)"
+            >
+              <FileText className="w-3.5 h-3.5 text-sky-600" />
+              <span>Brochure</span>
+            </a>
+
+            <a 
+              href="https://wa.me/918976600537?text=Hello%20Shree%20Engineers,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-all"
               title="Chat on WhatsApp"
             >
               <MessageSquare className="w-3.5 h-3.5" />
@@ -138,7 +150,7 @@ export default function Navbar({ onOpenQuote }) {
 
             <button
               onClick={onOpenQuote}
-              className="flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 shadow-md shadow-sky-600/20 transform hover:-translate-y-0.5 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 shadow-md shadow-sky-600/20 transform hover:-translate-y-0.5 transition-all"
             >
               <span>Get a Quote</span>
               <ArrowRight className="w-4 h-4" />
@@ -220,6 +232,16 @@ export default function Navbar({ onOpenQuote }) {
             </a>
 
             <div className="pt-4 border-t border-slate-200 flex flex-col gap-2">
+              <a 
+                href="/docs/shree-engineers-autocad-brochure.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 rounded-xl text-center text-xs font-bold text-sky-800 bg-sky-50 border border-sky-300 flex items-center justify-center gap-2"
+              >
+                <FileText className="w-4 h-4 text-sky-600" />
+                View Corporate Brochure (PDF)
+              </a>
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -230,13 +252,13 @@ export default function Navbar({ onOpenQuote }) {
                 Request a Quote
               </button>
               <a 
-                href="https://wa.me/919876543210" 
+                href="https://wa.me/918976600537" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full py-2.5 rounded-xl text-center text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-300 flex items-center justify-center gap-2"
               >
                 <MessageSquare className="w-4 h-4" />
-                Chat on WhatsApp (+91 98765 43210)
+                Chat on WhatsApp (+91 8976600537)
               </a>
             </div>
           </div>

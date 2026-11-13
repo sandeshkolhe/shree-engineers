@@ -29,7 +29,7 @@ export default function QuoteModal({ isOpen, onClose, initialService = '' }) {
 
   const handleWhatsAppDirect = () => {
     const text = `*New Inquiry - Shree Engineers*%0A*Name:* ${formData.name || 'Visitor'}%0A*Service:* ${formData.serviceCategory}%0A*Phone:* ${formData.phone || 'N/A'}%0A*Timeline:* ${formData.timeline}%0A*Details:* ${formData.notes || 'Interested in quotation'}`;
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+    window.open(`https://wa.me/918976600537?text=${text}`, '_blank');
   };
 
   return (
@@ -127,7 +127,7 @@ export default function QuoteModal({ isOpen, onClose, initialService = '' }) {
                     required
                     value={formData.phone}
                     onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 8976600537"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-sky-600 focus:bg-white transition-colors"
                   />
                 </div>

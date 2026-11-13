@@ -101,10 +101,26 @@ export default function EngineeringServices({ onOpenQuote }) {
                   </h4>
                   <div className="grid sm:grid-cols-3 gap-3">
                     {selectedService.subcategories.map((sub, sIdx) => (
-                      <div key={sIdx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 transition-all">
-                        <div className="text-sm font-bold text-slate-900 mb-1">{sub.name}</div>
-                        <div className="text-[10px] font-mono font-bold text-amber-700 mb-1.5">{sub.code}</div>
-                        <div className="text-xs text-slate-600 leading-snug">{sub.detail}</div>
+                      <div key={sIdx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 transition-all flex flex-col justify-between">
+                        <div>
+                          <div className="text-sm font-bold text-slate-900 mb-1">{sub.name}</div>
+                          <div className="text-[10px] font-mono font-bold text-amber-700 mb-1.5">{sub.code}</div>
+                          <div className="text-xs text-slate-600 leading-snug">{sub.detail}</div>
+                        </div>
+                        {sub.brochure && (
+                          <div className="pt-2.5 mt-2.5 border-t border-slate-200/80">
+                            <a
+                              href={sub.brochure}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-[11px] font-bold text-sky-700 hover:text-sky-900 bg-white hover:bg-sky-100/80 px-2.5 py-1 rounded-lg border border-sky-200 shadow-xs transition-colors"
+                              title={`Open ${sub.name} Design Brochure (PDF)`}
+                            >
+                              <FileText className="w-3 h-3 text-sky-600" />
+                              <span>View Brochure</span>
+                            </a>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -163,11 +179,25 @@ export default function EngineeringServices({ onOpenQuote }) {
                 </div>
               </div>
 
-              {/* Direct Inquiry CTA */}
-              <div className="pt-4 border-t border-slate-200 space-y-3">
+              {/* Direct Inquiry & Brochure CTA */}
+              <div className="pt-4 border-t border-slate-200 space-y-2.5">
                 <div className="text-xs text-slate-600 font-medium">
                   Ready to calculate, draft, or model your next mechanical asset?
                 </div>
+                
+                {selectedService.brochure && (
+                  <a
+                    href={selectedService.brochure}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm text-sky-800 bg-white hover:bg-sky-50 border border-sky-300 hover:border-sky-500 shadow-xs flex items-center justify-center gap-2 transition-all"
+                    title={`Download or View ${selectedService.brochureName || 'Service Brochure'} PDF`}
+                  >
+                    <FileText className="w-4 h-4 text-sky-600" />
+                    <span>View Brochure / More Details (PDF)</span>
+                  </a>
+                )}
+
                 <button
                   onClick={() => onOpenQuote(selectedService.title)}
                   className="w-full py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 shadow-md shadow-sky-600/20 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"

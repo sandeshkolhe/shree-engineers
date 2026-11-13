@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Clock, Award, CheckCircle2, ArrowRight, BookOpen } from 'lucide-react';
+import { GraduationCap, Clock, Award, CheckCircle2, ArrowRight, BookOpen, FileText } from 'lucide-react';
 import { trainingProgrammes } from '../data/servicesData';
 
 export default function TrainingSection({ onOpenQuote }) {
@@ -64,10 +64,23 @@ export default function TrainingSection({ onOpenQuote }) {
               </div>
 
               {/* Card Footer */}
-              <div className="pt-6 border-t border-slate-100 space-y-4">
+              <div className="pt-6 border-t border-slate-100 space-y-3">
                 <div className="text-[11px] text-slate-500 font-medium">
                   <strong className="text-slate-800">Target Audience:</strong> {course.audience}
                 </div>
+
+                {course.brochure && (
+                  <a
+                    href={course.brochure}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 px-3 rounded-xl font-bold text-xs text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-300 shadow-2xs flex items-center justify-center gap-2 transition-colors"
+                    title={`Open ${course.title} Syllabus / Brochure PDF`}
+                  >
+                    <FileText className="w-3.5 h-3.5 text-sky-600" />
+                    <span>View Course Brochure (PDF)</span>
+                  </a>
+                )}
 
                 <button
                   onClick={() => onOpenQuote(`Training: ${course.title}`)}
@@ -94,7 +107,7 @@ export default function TrainingSection({ onOpenQuote }) {
             </div>
           </div>
           <a
-            href="https://wa.me/919876543210?text=Hello,%20I%20am%20interested%20in%20Shree%20Engineers%20training%20programmes"
+            href="https://wa.me/918976600537?text=Hello,%20I%20am%20interested%20in%20Shree%20Engineers%20training%20programmes"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-bold text-sky-700 hover:text-sky-800 underline underline-offset-4"
